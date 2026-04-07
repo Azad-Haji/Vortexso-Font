@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <title>Vortexso Font</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: rgb(195, 235, 130);
+            padding: 25px 50px 50px 50px;
+            width: 800px;
+            max-width: 100%;
+            border-radius: 10px;
+            text-align: center;
+            overflow: hidden;
+        }
+        label {
+            font-family: Vortexso;
+            font-size: 35px;
+            padding: 20px;
+            color: rgb(17, 16, 14);
+            display: inline-block;
+        }
+        input, textarea {
+            font-family: Vortexso;
+            font-size: 50px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #toConvert {
+            direction: rtl;
+        }
+        #reversedText {
+            direction: ltr;
+            unicode-bidi: embed;
+        }
+        .button-container {
+            margin-top: 25px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        button {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            padding: 8px 25px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #3e8e41;
+        }
+        .note {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #2d5a2c;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        hr {
+            margin: 15px 0 5px 0;
+            border: 0;
+            height: 1px;
+            background-color: #8bc34a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label>يجب تثبيت الفونت أولاً</label><br/>
+        <label>أجعل اللغة في الجهاز الإنكليزية</label><br/><br/>
+        
+        <label>أدخل نصاً هنا</label><br/>
+        <input id="toConvert" type="text" oninput="reverseString()"><br/><br/>
+        
+        <label>النص بعد التحويل (انسخ هذا)</label><br/>
+        <textarea id="reversedText" rows="2" readonly></textarea>
+        
+        <div class="button-container">
+            <button onclick="copyText()">📋 نسخ</button>
+            <button onclick="clearText()">🗑 مسح</button>
+        </div>
+        <hr/>
+        <div class="note">
+            💡 ملاحظة: استخدم Shift للأحرف التي تحتاج إلى شكل "آخر الكلمة"
+        </div>
+    </div>
+
+    <script>
+        function reverseString(){
+            let text = document.getElementById("toConvert").value;
+            let reversed = text.split("").reverse().join("");
+            document.getElementById("reversedText").value = reversed;
+        }
+        
+        function copyText(){
+            let textarea = document.getElementById("reversedText");
+            textarea.select();
+            document.execCommand("copy");
+            alert("✅ تم نسخ النص!");
+        }
+        
+        function clearText(){
+            document.getElementById("toConvert").value = "";
+            document.getElementById("reversedText").value = "";
+        }
+    </script>
+</body>
+</html>
