@@ -70,3 +70,79 @@ VORTEXSO FONT
 روابط مفيدة:
 ------------
 أداة تصميم الفونت : fontstruct.com
+
+----------------------------------------------------------------------------------------
+
+========================================
+VORTEXSO FONT
+========================================
+
+Idea and Design: Azad Haji (آزاد حاجي)
+
+
+The Problem:
+------------
+Most game engines and design programs do not support the Arabic language.
+
+The Solution:
+-------------
+A simple idea that works in any program:
+- Vortexso Font: An English font that draws Arabic letters.
+- The system language remains English (no need to switch).
+- An HTML tool that automatically reverses the text.
+
+
+How to Use:
+----------------
+
+Step 1: Install the font
+--- Download the file Vortexso.ttf
+--- Double-click on it, then choose "Install"
+
+Step 2: Use the tool
+--- Open the file index.html in your browser
+--- Type your Arabic text in the first field (it will appear incorrect and reversed)
+--- Copy the corrected text from the second field
+--- Paste it into your program or game
+
+Note: Using the Shift Key
+--- Some letters require holding Shift to get the "end of word" form
+--- Examples: Kaf, Ain, Ghain, Fa, Qaf
+
+Practical Example:
+----------
+To write the word "شباك":
+
+1. In the tool: Type "شباك" normally (from right to left as you usually write)
+2. The letters will appear incorrect while typing in the first field.
+3. The words and letters will appear correctly in the second field.
+4. Click the Copy button and go to your program that does not support Arabic.
+5. Set the font to Vortexso, then paste the text.
+6. The text will now appear correctly in Arabic.
+
+
+Usage in Game Engines:
+----------------------------
+Works in any engine that supports TTF fonts:
+- Kaplay (Kaboom.js)
+- Unity
+- GameMaker
+- Construct
+- And any other design program that does not support Arabic.
+
+
+Project Files:
+--------------
+- Vortexso.ttf : The font file
+- index.html : The text reversal tool
+
+
+License:
+--------
+Open source. Everyone has the right to use and develop it.
+Design and Idea: Azad Haji (آزاد حاجي)
+
+
+Useful Links:
+------------
+Font design tool: fontstruct.com
